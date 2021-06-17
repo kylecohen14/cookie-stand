@@ -1,0 +1,97 @@
+font-family: 'Mate SC', serif;
+
+font-family: 'Barlow', sans-serif;
+
+#linked {
+  display: flex;
+  border-style: solid, black;
+}
+h1 {
+  background-color: rgba(187, 87, 87, 0.397);
+  border-style: double;
+  padding: .5em;
+  text-align: center;
+  position: sticky;
+  margin: 20px;
+  font-family: 'Barlow', sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
+}
+h2 {
+  background-color: rgba(187, 87, 87, 0.397);
+  border-style: double;
+  padding: .5em;
+  text-align: center;
+  position: sticky;
+  margin: 20px;
+  font-family: 'Barlow', sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
+}
+
+#family {
+  float: left;
+  width: 40%;
+}
+#para {
+  float: right;
+  background-color: rgba(187, 87, 87, 0.397);
+  border-style: double;
+  padding: .5em;
+  text-align: center;
+  position: sticky;
+  margin: 20px;
+  font-family: 'Barlow', sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  width: 48%;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+#contact {
+  background-color: rgba(187, 87, 87, 0.397);
+  border-style: double;
+  padding: .5em;
+  text-align: center;
+  margin: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cookie {
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+#cutter {
+  float: right;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: linear-gradient(to right, rgba(180, 104, 117, 0.658), rgba(180, 82, 82, 0.514), rgba(196, 116, 116, 0.527), rgba(190, 90, 90, 0.322), rgba(170, 170, 108, 0.418), rgba(128, 128, 70, 0.342), rgba(190, 90, 90, 0.322), rgba(196, 116, 116, 0.527), rgba(180, 82, 82, 0.514), rgba(180, 104, 117, 0.658));
+  font-family: 'Mate SC', serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  text-align: center;
+}
+html {
+  border-style: groove;
+  border-collapse: collapse;
+  border-radius: 5%;
+  width: 100%;
+}
+table, th, td {
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  border: 1px solid black;
+  text-align: center;
+  max-width: 60%;
+}
