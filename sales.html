@@ -12,6 +12,23 @@
       <h2>Store Sales By Hour</h2>
       <a href="index.html">Return to Store</a>
       </header>
+      <form id="addNewLocationForm" action="">
+        <fieldset>
+          <legend>Add a New Cookie Stand</legend>
+            <label for="">Location
+              <input type="text" name="locationName" maxlength="25" minlength="2" required>
+            </label>
+            <label for="">Min Customers an Hour
+              <input type="number" name="minCust" min="1" max="150" required>
+            </label>
+            <label for="">Max Customers an Hour
+              <input type="number" name="maxCust" min="1" max="150" required>
+            </label>
+            <labe for="">Average Cookies Bought
+              <input type="number" step=".01" name="avgCookie" required>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
     <main>
     <div id="storeSales">
 
