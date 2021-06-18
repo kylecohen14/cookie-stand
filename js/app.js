@@ -1,10 +1,12 @@
 'use strict';
 
 const storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-// ------------- day 2 work -------------
 
-// constructor
-// const salesArray = [];
+const storeSalesDivElem = document.getElementById('storeSales');
+const tableElem = document.createElement('table');
+const locationFormElem = document.getElementById('addNewLocationForm');
+storeSalesDivElem.appendChild(tableElem);
+
 function Cookiesales (locationName, minCust, maxCust, avgCookie) {
   this.locationName = locationName;
   this.minCust = minCust;
@@ -20,7 +22,6 @@ Cookiesales.prototype.salesArray = [];
 Cookiesales.prototype.randomCustomer = function() {
   return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
 };
-// GOOD
 
 Cookiesales.prototype.hourlySales = function () {
   for (let i = 0; i< storeHours.length; i++) {
@@ -31,12 +32,7 @@ Cookiesales.prototype.hourlySales = function () {
     let bunchofCookies = Math.floor(this.avgCookie * customers);
     this.cookiesPerhour.push(bunchofCookies);
   }
-  // console.log(this);
 };
-
-const storeSalesDivElem = document.getElementById('storeSales');
-const tableElem = document.createElement('table');
-storeSalesDivElem.appendChild(tableElem);
 
 
 function createStorehours() {
@@ -47,16 +43,13 @@ function createStorehours() {
   const locationCell = document.createElement ('th');
   locationCell.textContent = ('Location');
   row1.appendChild(locationCell);
-
   for (let i = 0; i < storeHours.length; i++) {
     const headerCell = document.createElement('th');
     headerCell.textContent = storeHours[i];
     row1.appendChild(headerCell);
   }
-  // const headerCellTotals = document.createElement('th');
-  // headerCellTotals.textContent = 'Totals';
-  // row1.appendChild(headerCellTotals);
 }
+
 
 Cookiesales.prototype.renderCookiesales = function() {
   let storeTotal = 0
@@ -77,7 +70,10 @@ Cookiesales.prototype.renderCookiesales = function() {
   cityRow.appendChild(storeTotalElem);
 }
 
+
 function renderAllCityStores() {
+  tableElem.innerHTML = "";
+  createStorehours();
   for (let i = 0; i < Cookiesales.prototype.salesArray.length; i++) {
     let currentCity = Cookiesales.prototype.salesArray[i];
     currentCity.randomCustomer();
@@ -85,7 +81,35 @@ function renderAllCityStores() {
     // ??????
     currentCity.renderCookiesales();
   }
+  totalCookiesSold();
 }
+
+
+function locationSubmit(event) {
+  event.preventDefault();
+  // console.log(event.target.name.value, 'event target name');
+  let locationName = event.target.locationName.value;
+  let minCust = event.target.minCust.value;
+  let maxCust = event.target.maxCust.value;
+  let avgCookie = event.target.avgCookie.value;
+
+  // push new store into store array?
+
+  console.log(locationName, minCust, maxCust, avgCookie);
+
+  const newLocation = new Cookiesales(locationName, minCust, maxCust, avgCookie);
+
+  console.log(newLocation);
+  newLocation.randomCustomer;
+  newLocation.hourlySales;
+  newLocation.totalCookiesSold;
+  // newLocation.renderCookiesales;
+  renderAllCityStores();
+  // totalCookiesSold();
+  event.target.reset();
+}
+
+
 const Seattle = new Cookiesales('Seattle', 23, 65, 6.3);
 const Tokyo = new Cookiesales('Tokyo', 3, 24, 1.2);
 const Dubai = new Cookiesales('Dubai', 11, 38, 3.7);
@@ -93,8 +117,8 @@ const Paris = new Cookiesales('Paris', 20, 38, 2.3);
 const Lima = new Cookiesales('Lima', 2, 16, 4.6);
 
 
+
 function totalCookiesSold() {
-  
   const tFooter = document.createElement("tfoot");
   tableElem.appendChild(tFooter);
   const citysTotal = document.createElement('th');
@@ -105,12 +129,8 @@ function totalCookiesSold() {
 
   for (let i = 0; i < storeHours.length; i++) {
     let hourTotal = 0
-
-    // outer
     for (let j = 0; j < Cookiesales.prototype.salesArray.length; j++) {
       hourTotal += Cookiesales.prototype.salesArray[j].cookiesPerhour[i];
-      // console.log(hourTotal);
-      // inner
     }
     const hourTotalCell = document.createElement('th');
     hourTotalCell.textContent = hourTotal;
@@ -121,8 +141,13 @@ function totalCookiesSold() {
   totalCookiesElem.textContent = totalCookies;
   tFooter.appendChild(totalCookiesElem);
 }
+
 const storeArray = [Seattle, Tokyo, Dubai, Paris, Lima];
 
+locationFormElem.addEventListener("submit", locationSubmit);
+
 renderAllCityStores();
-createStorehours();
-totalCookiesSold();
+// createStorehours();
+// totalCookiesSold();
+
+// 149 was building header and footer already, 150 and 151 were building header and footer again.
