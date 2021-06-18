@@ -1,11 +1,7 @@
-font-family: 'Mate SC', serif;
 
-font-family: 'Barlow', sans-serif;
 
-#linked {
-  display: flex;
-  border-style: solid, black;
-}
+
+
 h1 {
   background-color: rgba(187, 87, 87, 0.397);
   border-style: double;
@@ -16,7 +12,7 @@ h1 {
   font-family: 'Mate SC', serif;
   margin-right: auto;
   margin-left: auto;
-  width: fit-content;
+  width: 40%;
 }
 h2 {
   background-color: rgba(187, 87, 87, 0.397);
@@ -26,29 +22,48 @@ h2 {
   position: sticky;
   margin: 20px;
   font-family: 'Barlow', sans-serif;
-  margin-right: auto;
+  margin-right: 40px;
   margin-left: auto;
   width: fit-content;
+  margin-top: 88px;
 }
+header{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: black 3px;
+  border-style: groove;
+  height: 344px;
 
-#family {
+}
+#section1 {
+  margin-top: 40px;
+  height: 480px;
+  width: 55%;
+  float: right;
+}
+#section2 {
+  margin-top: 40px;
+  height: 480px;
+  width: 42%;
   float: left;
-  width: 40%;
 }
 #para {
-  float: right;
+  /* float: right; */
   background-color: rgba(187, 87, 87, 0.397);
   border-style: double;
-  padding: .5em;
-  text-align: center;
-  position: sticky;
-  margin: 20px;
+  padding: .4em;
+  text-align: left;
+  margin: 8px;
+  margin-left: 40px;
   font-family: 'Mate SC', serif;
-  margin-right: auto;
-  margin-left: auto;
-  width: 48%;
-  font-size: 1.8em;
-  font-weight: 500;
+  /* margin-right: auto;
+  margin-left: auto; */
+  font-size: 1.2em;
+  font-weight: 300;
+  height: 300px;
+  width: 390px;
+  padding-bottom: 20px;
 }
 #contact {
   background-color: rgba(187, 87, 87, 0.397);
@@ -60,20 +75,33 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
-
+#salmonpng {
+  width: 487px;
+  height: 146px;
+  margin-right: 40px;
+}
 #cookie {
   float: left;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 8px;
+  margin-top: 81px;
+  margin-bottom: 81px;
+
 }
 #cutter {
   float: right;
+  width: 190px;
+  height: 190px;
+  margin: 8px;
+  margin-top: 72px;
+  margin-bottom: 70px;
 }
 
 ul {
   list-style: none;
 }
-
+main {
+  height: 1500px;
+}
 body {
   background: linear-gradient(to right, rgba(180, 104, 117, 0.658), rgba(180, 82, 82, 0.514), rgba(196, 116, 116, 0.527), rgba(190, 90, 90, 0.322), rgba(170, 170, 108, 0.418), rgba(128, 128, 70, 0.342), rgba(190, 90, 90, 0.322), rgba(196, 116, 116, 0.527), rgba(180, 82, 82, 0.514), rgba(180, 104, 117, 0.658));
   font-family: 'Mate SC', serif;
@@ -84,8 +112,7 @@ body {
 html {
   border-style: groove;
   border-collapse: collapse;
-  border-radius: 5%;
-  width: 100%;
+
 }
 table, th, td {
   font-family: 'Barlow', sans-serif;
@@ -94,5 +121,49 @@ table, th, td {
   align-content: center;
   border: 1px solid black;
   text-align: center;
-  max-width: 60%;
+  max-width: 800px;
+}
+form {
+  font-family: 'Barlow', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid black;
+  /* max-width: 800px; */
+  width: 400px;
+  margin-bottom: 22px;
+  margin-top: 15px;
+  height: 200px;
+  box-sizing: border-box;
+  
+}
+
+fieldset {
+margin: 10px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+font-size: 1em;
+}
+
+label {
+  display: block;
+  margin-top: 5px;
+}
+input {
+  width: 70px;
+}
+#input1 {
+  margin-left: 139px;
+}
+#input2 {
+  margin-left: 6px;
+}
+#input3 {
+  margin-left: 3px;
+}
+#linked {
+}
+footer {
+  position: sticky;
+  
 }
