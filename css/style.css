@@ -13,6 +13,7 @@
   background-color: rgba(187, 87, 87, 0.397);
   border-style: double;
   padding: .5em;
+  color: rgb(56, 17, 17);
   text-align: center;
   position: sticky;
   margin: 20px;
@@ -22,6 +23,7 @@
   width: 40%;
 }
 #salesh2 {
+  color: rgb(56, 17, 17);
   background-color: rgba(187, 87, 87, 0.397);
   border-style: double;
   padding: .5em;
@@ -34,6 +36,7 @@
   width: 35%;
 }
 table, th, td {
+  color: rgb(56, 17, 17);
   background-color: rgba(255, 248, 220, 0.336);
   font-family: Arial, Helvetica, sans-serif;
   margin-left: auto;
@@ -88,45 +91,32 @@ input {
   width: 200px;
   justify-content: center;
 }
-footer {
-  position: sticky;
-  
-}
-/* ----------------sales above index below-------------------------- */
+
+/* ----------------sales above index below------------------- */
 
 #topbanner {
   background-color: rgba(0, 0, 0, 0.89);
   height: 60px;
 }
 #indexheader{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
   font-style: italic;
   /* position: relative; */
   background-color:rgba(0, 0, 0, 0.87);
-  width: 100%;
+  /* width: 100%; */
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   border: rgba(187, 87, 87, 0.575) 5px;
   border-style: groove;
   height: 170px;
+  width: 100%;
 }
-#cookie {
-  float: right;
-  margin: 8px;
-  margin-top: 81px;
-  margin-bottom: 81px;
 
-}
-#cutter {
-  float: right;
-  width: 190px;
-  height: 190px;
-  margin: 8px;
-  margin-top: 72px;
-  margin-bottom: 70px;
+#indexh1container {
+  width: 20%;
 }
 #indexh1 {
-  /* position: absolute; */
   color: rgb(221, 146, 146);
   border-style: double;
   padding: .5em;
@@ -134,23 +124,15 @@ footer {
   position: sticky;
   float: left;
   margin-left: 120px;
-  /* font-family: 'Mate SC', serif; */
-  width: 310px;
+  width: 100%;
 }
-/* #contact {
-  background-color: rgba(219, 133, 133, 0.979);
-  border-style: double;
-  padding: .5em;
-  text-align: center;
-  margin: 20px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-} */
+
 #salmonpng {
+  display: flex;
   position: sticky;
   float: right;
-  width: 360px;
+  width: 22%;
+  max-width: 100%;
   height: 115px;
   margin-right: 40px;
   margin-top: 15px;
@@ -158,14 +140,13 @@ footer {
 #contact {
   position: sticky;
   float: right;
-  margin-top: 65px;
+  margin-top: 85px;
   margin-right: 130px;
   font-weight: 500;
   display: flex;
   color: rgb(221, 146, 146);
-  width: 600px;
+  width: 50%;
   justify-content: space-between;
-  /* align-items: center; */
   font-size: .8em;
   padding: 0;
 }
@@ -197,53 +178,105 @@ footer {
 
 /* ---------------------------------- */
 #section1 {
+  display: flex;
   margin-top: 40px;
-  height: 480px;
-  width: 55%;
-  float: right;
+  height: 550px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
-
+#indexh2container {
+  width: 65%;
+}
 #indexh2 {
+  font-size: 2.6em;
   background-color: rgba(187, 87, 87, 0.397);
   border-style: double;
   padding: .5em;
   text-align: center;
-  position: sticky;
+  /* position: sticky; */
   margin: 20px;
-  font-family: 'Barlow', sans-serif;
-  margin-right: 40px;
-  margin-left: auto;
-  width: fit-content;
-  margin-top: 88px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+  /* margin-right: 40px;
+  margin-left: auto; */
+  width: 540px;
+  margin-top: 20px;
+  height: 330px;
+  flex-wrap: wrap;
 }
-/* ------------------------------------------------------- */
-
-
-#section2 {
-  margin-top: 40px;
-  height: 480px;
-  width: 42%;
-  float: left;
+#cookie {
+  width: 200px;
+ float: right;
+ width: fit-content;
+ margin-top: 32px;
+}
+#fish {
+  width: 240px;
+float: left;
+margin-top: 40px;
+}
+#paracontainer {
+  width: 35%;
 }
 #para {
+  float: right;
   /* float: right; */
   background-color: rgba(187, 87, 87, 0.397);
   border-style: double;
   padding: .4em;
   text-align: left;
-  margin: 8px;
-  margin-left: 40px;
-  font-family: 'Mate SC', serif;
+  margin: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   /* margin-right: auto;
   margin-left: auto; */
   font-size: 1.2em;
   font-weight: 300;
-  height: 300px;
-  width: 390px;
-  padding-bottom: 20px;
+  height: 340px;
+  /* padding-bottom: 20px; */
 }
-/* ------------------------------------------- */
+#cutter {
+  width: 180px;
+  margin-right: 180px;
+  margin-left: 180px;
+}
+/* ------------------------------------------------------- */
+#linked {
+  display: flex;
+  margin-top: 40px;
+  height: 550px;
+  margin-left: 100px;
+  margin-right: 100px;
+  /* float: right;
+  width: 50%;
+  margin-right: 70px; */
+}
+#family {
 
+}
+#familyP {
+
+}
+#familyContainer {
+  width: 65%;
+}
+#familyP {
+  font-size: 2.1em;
+  background-color: rgba(187, 87, 87, 0.397);
+  border-style: double;
+  padding: .5em;
+  text-align: center;
+  margin: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 540px;
+  margin-top: 120px;
+  height: 240px;
+  flex-wrap: wrap;
+}
+
+#indexFooter {
+display: flex;
+justify-content: center;
+}
 
 ul {
   list-style: none;
@@ -254,10 +287,6 @@ main {
 }
 body {
   background: linear-gradient(to right, rgba(180, 104, 117, 0.658), rgba(180, 82, 82, 0.514), rgba(196, 116, 116, 0.527), rgba(190, 90, 90, 0.322), rgba(170, 170, 108, 0.418), rgba(128, 128, 70, 0.342), rgba(190, 90, 90, 0.322), rgba(196, 116, 116, 0.527), rgba(180, 82, 82, 0.514), rgba(180, 104, 117, 0.658));
-  /* font-family: 'Mate SC', serif; */
-  /* font-weight: 300;
-  font-size: 1.2em; */
-  /* text-align: center; */
   box-sizing: border-box;
   margin: 0;
 }
